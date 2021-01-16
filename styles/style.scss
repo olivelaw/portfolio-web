@@ -3,6 +3,7 @@ $main: #29294a;
 $primary: #00f0ff;
 $secondary: #12d995;
 
+$fontColor: #d9d9e9;
 $fontPath: "../fonts";
 
 /* -- MIXINS -- */
@@ -67,6 +68,7 @@ html, body {
     background: $main;
     box-shadow: none;
     font-family: "Conv_Inconsolata-Light";
+    color: $fontColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,55 +124,111 @@ a {
     }
 }
 
-/* -- SIDEBAR -- */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    background: #1b1b31;
+.custom-list-marker {
+    li {
+        padding: 10px;
 
-    img.logo {
-        width: 60px;
-        margin-bottom: 50px;
+        &::marker {
+            content: ">";
+            color: $primary;
+        }
+    }
+}
+
+.text-light {
+    font-family: "Conv_Inconsolata-Light";
+}
+
+/* -- SECTIONS -- */
+.row {
+    position: relative;
+
+    &:nth-child(even) {
+        .section-header {
+            background: rgba(35,35,62,0.8);
+        }
+    }
+}
+.section-bg-opacity {
+    background: rgba(255,255,255,0.01);
+    position: absolute;
+    height: inherit;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.section-header {
+    background: #23233e;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 0;
+
+    .section-header-content {
+        display: flex;
+        width: 400px;
+        padding-right: 50px;
+        justify-content: flex-end;
+        
     }
 
-    img.mugshot {
-        width: 200px;
-        margin-bottom: 50px;
+    img {
+        width: 280px;
+    }
+}
+
+.hero {
+    height: 100vh;
+    align-items: center;
+
+    .section-header-content {
+        padding-right: 35px;
+    }
+
+    img {
+        width: 280px;
     }
 
     .soc-media {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        align-content: center;
+    
+        li {
+            margin-right: 20px;
+        }
         
         a {
             width: 20px;
             height: 20px;
             @include transition();
-
+    
             &:hover {
                 color: $primary;
             }
-
+    
             svg {
                 width: inherit;
                 height: inherit;
             }
-        }
-        
+        } 
     }
 }
 
-/* -- MAIN -- */
-main {
-    .nav {
-        background: #21213f;
+/* -- CONTENT -- */
+.section-content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
 
-        a {
-            &:hover {
-                color: $primary;
+    .section-content {
+        width: 624px;
+        padding-left: 60px;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }

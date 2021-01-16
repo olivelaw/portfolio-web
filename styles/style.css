@@ -41,6 +41,7 @@ html, body {
   background: #29294a;
   box-shadow: none;
   font-family: "Conv_Inconsolata-Light";
+  color: #d9d9e9;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,46 +92,96 @@ a:hover {
   box-shadow: none;
 }
 
-/* -- SIDEBAR -- */
-.sidebar {
+.custom-list-marker li {
+  padding: 10px;
+}
+.custom-list-marker li::marker {
+  content: ">";
+  color: #00f0ff;
+}
+
+.text-light {
+  font-family: "Conv_Inconsolata-Light";
+}
+
+/* -- SECTIONS -- */
+.row {
+  position: relative;
+}
+.row:nth-child(even) .section-header {
+  background: rgba(35, 35, 62, 0.8);
+}
+
+.section-bg-opacity {
+  background: rgba(255, 255, 255, 0.01);
+  position: absolute;
+  height: inherit;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.section-header {
+  background: #23233e;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   padding: 50px 0;
-  background: #1b1b31;
 }
-.sidebar img.logo {
-  width: 60px;
-  margin-bottom: 50px;
+.section-header .section-header-content {
+  display: flex;
+  width: 400px;
+  padding-right: 50px;
+  justify-content: flex-end;
 }
-.sidebar img.mugshot {
-  width: 200px;
-  margin-bottom: 50px;
+.section-header img {
+  width: 280px;
 }
-.sidebar .soc-media {
+
+.hero {
+  height: 100vh;
+  align-items: center;
+}
+.hero .section-header-content {
+  padding-right: 35px;
+}
+.hero img {
+  width: 280px;
+}
+.hero .soc-media {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-content: center;
 }
-.sidebar .soc-media a {
+.hero .soc-media li {
+  margin-right: 20px;
+}
+.hero .soc-media a {
   width: 20px;
   height: 20px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.sidebar .soc-media a:hover {
+.hero .soc-media a:hover {
   color: #00f0ff;
 }
-.sidebar .soc-media a svg {
+.hero .soc-media a svg {
   width: inherit;
   height: inherit;
 }
 
-/* -- MAIN -- */
-main .nav {
-  background: #21213f;
+/* -- CONTENT -- */
+.section-content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
 }
-main .nav a:hover {
-  color: #00f0ff;
+.section-content-wrapper .section-content {
+  width: 624px;
+  padding-left: 60px;
+}
+.section-content-wrapper .section-content p:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
