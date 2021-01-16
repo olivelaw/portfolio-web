@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* -- VARIABLES -- */
+/* -- MIXINS -- */
+@font-face {
+  font-family: "Conv_Inconsolata-Bold";
+  src: url("../fonts/Inconsolata-Bold/Inconsolata-Bold.eot");
+  src: local("☺"), url("../fonts/Inconsolata-Bold/Inconsolata-Bold.woff") format("woff"), url("../fonts/Inconsolata-Bold/Inconsolata-Bold.ttf") format("truetype"), url("../fonts/Inconsolata-Bold/Inconsolata-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Inconsolata-Medium";
+  src: url("../fonts/Inconsolata-Medium/Inconsolata-Medium.eot");
+  src: local("☺"), url("../fonts/Inconsolata-Medium/Inconsolata-Medium.woff") format("woff"), url("../fonts/Inconsolata-Medium/Inconsolata-Medium.ttf") format("truetype"), url("../fonts/Inconsolata-Medium/Inconsolata-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Inconsolata-SemiBold";
+  src: url("../fonts/Inconsolata-SemiBold/Inconsolata-SemiBold.eot");
+  src: local("☺"), url("../fonts/Inconsolata-SemiBold/Inconsolata-SemiBold.woff") format("woff"), url("../fonts/Inconsolata-SemiBold/Inconsolata-SemiBold.ttf") format("truetype"), url("../fonts/Inconsolata-SemiBold/Inconsolata-SemiBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Inconsolata-Light";
+  src: url("../fonts/Inconsolata-Light/Inconsolata-Light.eot");
+  src: local("☺"), url("../fonts/Inconsolata-Light/Inconsolata-Light.woff") format("woff"), url("../fonts/Inconsolata-Light/Inconsolata-Light.ttf") format("truetype"), url("../fonts/Inconsolata-Light/Inconsolata-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Inconsolata-Regular";
+  src: url("../fonts/Inconsolata-Regular/Inconsolata-Regular.eot");
+  src: local("☺"), url("../fonts/Inconsolata-Regular/Inconsolata-Regular.woff") format("woff"), url("../fonts/Inconsolata-Regular/Inconsolata-Regular.ttf") format("truetype"), url("../fonts/Inconsolata-Regular/Inconsolata-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* -- GLOBAL -- */
+html, body {
+  background: #29294a;
+  box-shadow: none;
+  font-family: "Conv_Inconsolata-Light";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Conv_Inconsolata-Medium";
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.text-primary {
+  color: #00f0ff !important;
+}
+
+.btn-outline-primary {
+  border: 1px solid #00f0ff;
+  background: transparent;
+  color: #00f0ff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+}
+.btn-outline-primary:hover {
+  color: #00f0ff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00f0ff;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #00f0ff;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+/* -- SIDEBAR -- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  background: #1b1b31;
+}
+.sidebar img.logo {
+  width: 60px;
+  margin-bottom: 50px;
+}
+.sidebar img.mugshot {
+  width: 200px;
+  margin-bottom: 50px;
+}
+.sidebar .soc-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sidebar .soc-media a {
+  width: 20px;
+  height: 20px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sidebar .soc-media a:hover {
+  color: #00f0ff;
+}
+.sidebar .soc-media a svg {
+  width: inherit;
+  height: inherit;
+}
+
+/* -- MAIN -- */
+main .nav {
+  background: #21213f;
+}
+main .nav a:hover {
+  color: #00f0ff;
+}
+
+/*# sourceMappingURL=style.css.map */

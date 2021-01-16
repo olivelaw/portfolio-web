@@ -1,0 +1,177 @@
+/* -- VARIABLES -- */
+$main: #29294a;
+$primary: #00f0ff;
+$secondary: #12d995;
+
+$fontPath: "../fonts";
+
+/* -- MIXINS -- */
+@mixin transition() {
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@font-face {
+	font-family: 'Conv_Inconsolata-Bold';
+	src: url('#{$fontPath}/Inconsolata-Bold/Inconsolata-Bold.eot');
+    src: local('☺'), url('#{$fontPath}/Inconsolata-Bold/Inconsolata-Bold.woff') format('woff'),
+    url('#{$fontPath}/Inconsolata-Bold/Inconsolata-Bold.ttf') format('truetype'),
+    url('#{$fontPath}/Inconsolata-Bold/Inconsolata-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Inconsolata-Medium';
+	src: url('#{$fontPath}/Inconsolata-Medium/Inconsolata-Medium.eot');
+    src: local('☺'), url('#{$fontPath}/Inconsolata-Medium/Inconsolata-Medium.woff') format('woff'),
+    url('#{$fontPath}/Inconsolata-Medium/Inconsolata-Medium.ttf') format('truetype'),
+    url('#{$fontPath}/Inconsolata-Medium/Inconsolata-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Inconsolata-SemiBold';
+	src: url('#{$fontPath}/Inconsolata-SemiBold/Inconsolata-SemiBold.eot');
+    src: local('☺'), url('#{$fontPath}/Inconsolata-SemiBold/Inconsolata-SemiBold.woff') format('woff'),
+    url('#{$fontPath}/Inconsolata-SemiBold/Inconsolata-SemiBold.ttf') format('truetype'),
+    url('#{$fontPath}/Inconsolata-SemiBold/Inconsolata-SemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Inconsolata-Light';
+	src: url('#{$fontPath}/Inconsolata-Light/Inconsolata-Light.eot');
+    src: local('☺'), url('#{$fontPath}/Inconsolata-Light/Inconsolata-Light.woff') format('woff'),
+    url('#{$fontPath}/Inconsolata-Light/Inconsolata-Light.ttf') format('truetype'),
+    url('#{$fontPath}/Inconsolata-Light/Inconsolata-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Inconsolata-Regular';
+	src: url('#{$fontPath}/Inconsolata-Regular/Inconsolata-Regular.eot');
+    src: local('☺'), url('#{$fontPath}/Inconsolata-Regular/Inconsolata-Regular.woff') format('woff'),
+    url('#{$fontPath}/Inconsolata-Regular/Inconsolata-Regular.ttf') format('truetype'),
+    url('#{$fontPath}/Inconsolata-Regular/Inconsolata-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* -- GLOBAL -- */
+html, body {
+    background: $main;
+    box-shadow: none;
+    font-family: "Conv_Inconsolata-Light";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Conv_Inconsolata-Medium";
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    @include transition();
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.btn-outline-primary {
+    border: 1px solid $primary;
+    background: transparent;
+    color: $primary;
+    @include transition();
+    @include border-radius(50px);
+
+    &:hover {
+        color: $primary;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid $primary;
+    }
+
+    &:not(:disabled):not(.disabled).active:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:focus,
+    &.focus {
+        box-shadow: none; 
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active {
+        border-color: $primary;
+        background-color: rgba(255,255,255,0.1);
+        box-shadow: none; 
+    }
+}
+
+/* -- SIDEBAR -- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background: #1b1b31;
+
+    img.logo {
+        width: 60px;
+        margin-bottom: 50px;
+    }
+
+    img.mugshot {
+        width: 200px;
+        margin-bottom: 50px;
+    }
+
+    .soc-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        a {
+            width: 20px;
+            height: 20px;
+            @include transition();
+
+            &:hover {
+                color: $primary;
+            }
+
+            svg {
+                width: inherit;
+                height: inherit;
+            }
+        }
+        
+    }
+}
+
+/* -- MAIN -- */
+main {
+    .nav {
+        background: #21213f;
+
+        a {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
