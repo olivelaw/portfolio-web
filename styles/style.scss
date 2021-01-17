@@ -64,6 +64,7 @@ $fontPath: "../fonts";
 }
 
 /* -- GLOBAL -- */
+
 html, body {
     background: $main;
     box-shadow: none;
@@ -84,6 +85,7 @@ a {
     @include transition();
 
     &:hover {
+        color: $primary;
         text-decoration: underline;
     }
 }
@@ -92,8 +94,24 @@ a {
     height: 100vh;
 }
 
+.text-light {
+    font-family: "Conv_Inconsolata-Light";
+}
+
+.text-medium {
+    font-family: "Conv_Inconsolata-Medium";
+}
+
+.text-bold {
+    font-family: "Conv_Inconsolata-Bold";
+}
+
 .text-primary {
     color: $primary !important;
+}
+
+.text-small {
+    font-size: 14px;
 }
 
 .btn-outline-primary {
@@ -124,19 +142,9 @@ a {
     }
 }
 
-.custom-list-marker {
-    li {
-        padding: 10px;
-
-        &::marker {
-            content: ">";
-            color: $primary;
-        }
-    }
-}
-
-.text-light {
-    font-family: "Conv_Inconsolata-Light";
+.marker {
+    margin-right: 7px;
+    color: $primary;
 }
 
 /* -- SECTIONS -- */
@@ -165,11 +173,9 @@ a {
     padding: 50px 0;
 
     .section-header-content {
-        display: flex;
         width: 400px;
+        text-align: right;
         padding-right: 50px;
-        justify-content: flex-end;
-        
     }
 
     img {
@@ -192,24 +198,25 @@ a {
     .soc-media {
         display: flex;
         flex-direction: row;
-        align-content: center;
+        align-items: center;
     
         li {
             margin-right: 20px;
         }
         
         a {
-            width: 20px;
-            height: 20px;
-            @include transition();
-    
-            &:hover {
-                color: $primary;
-            }
-    
-            svg {
-                width: inherit;
-                height: inherit;
+            &.soc-media-icon {
+                width: 20px;
+                height: 20px;
+        
+                &:hover {
+                    color: $primary;
+                }
+        
+                svg {
+                    width: inherit;
+                    height: inherit;
+                }
             }
         } 
     }
@@ -232,4 +239,74 @@ a {
             }
         }
     }
+}
+
+.expertise-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    li {
+        padding: 2px 12px;
+        margin: 0 8px 8px 0;
+        background: darken($main, 3%);
+        @include border-radius(50px);
+    }
+
+    img {
+        width: 18px;
+    }
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        width: 1px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    & > li {
+        margin-bottom: 20px;
+        padding-left: 30px;
+
+        &:before {
+            content: ' ';
+            background: $primary;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            margin-top: 9px;
+            left: -6px;
+            width: 13px;
+            height: 13px;
+            z-index: 400;
+        }
+    }
+
+    a {
+        color: $primary;
+    }
+
+    .text-small {
+        margin-bottom: 0;
+        color: lighten($main, 55%);
+    }
+
+    .description {
+        margin-top: 20px;
+    }
+}
+
+.role {
+    font-family: "Conv_Inconsolata-Bold";
+    font-size: 20px;
+    margin-bottom: 0;
 }
