@@ -1,6 +1,6 @@
 /* -- VARIABLES -- */
 $main: #29294a;
-$primary: #00f0ff;
+$primary: #00eeff;
 $secondary: #12d995;
 
 $fontColor: #d9d9e9;
@@ -112,6 +112,12 @@ a {
 
 .text-small {
     font-size: 14px;
+    margin-bottom: 0;
+    color: lighten($main, 55%);
+}
+
+.description {
+    margin-top: 20px;
 }
 
 .btn-outline-primary {
@@ -194,32 +200,33 @@ a {
     img {
         width: 280px;
     }
+}
 
-    .soc-media {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    
-        li {
-            margin-right: 20px;
-        }
-        
-        a {
-            &.soc-media-icon {
-                width: 20px;
-                height: 20px;
-        
-                &:hover {
-                    color: $primary;
-                }
-        
-                svg {
-                    width: inherit;
-                    height: inherit;
-                }
-            }
-        } 
+.soc-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+
+    li {
+        margin-right: 20px;
     }
+    
+    a {
+        &.soc-media-icon {
+            width: 20px;
+            height: 20px;
+    
+            &:hover {
+                color: $primary;
+            }
+    
+            svg {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    } 
 }
 
 /* -- CONTENT -- */
@@ -241,7 +248,7 @@ a {
     }
 }
 
-.expertise-list {
+.tech-list {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
@@ -255,6 +262,17 @@ a {
 
     img {
         width: 18px;
+    }
+
+    &.portfolio {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-left: -2px;
+
+        li {
+            padding: 2px 8px;
+            margin: 0 4px 4px 0;
+        }
     }
 }
 
@@ -294,19 +312,37 @@ ul.timeline {
     a {
         color: $primary;
     }
-
-    .text-small {
-        margin-bottom: 0;
-        color: lighten($main, 55%);
-    }
-
-    .description {
-        margin-top: 20px;
-    }
 }
 
 .role {
     font-family: "Conv_Inconsolata-Bold";
     font-size: 20px;
     margin-bottom: 0;
+}
+
+.portfolio-img-wrapper,
+.portfolio-img {
+    display: block;
+}
+
+.portfolio-img-wrapper {
+    position: relative;
+}
+
+.portfolio-img {
+    width: 100%;
+}
+
+.portfolio-title {
+    position: absolute;;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 8px ;
+    background: rgba(41,41,74,0.9);
+    @include transition();
+
+    h5 {
+        margin-bottom: 0;
+    }
 }
