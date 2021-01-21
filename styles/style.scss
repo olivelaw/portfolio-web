@@ -82,11 +82,13 @@ ul {
 }
 
 a {
+    color: $primary;
     @include transition();
 
     &:hover {
+        background: rgba(255,255,255,0.2);
         color: $primary;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
@@ -187,6 +189,13 @@ a {
     img {
         width: 280px;
     }
+}
+
+.section-title {
+    color: lighten($main, 55%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
 }
 
 .hero {

@@ -54,11 +54,13 @@ ul {
 }
 
 a {
+  color: #00eeff;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 a:hover {
+  background: rgba(255, 255, 255, 0.2);
   color: #00eeff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .full-height {
@@ -151,6 +153,13 @@ a:hover {
 }
 .section-header img {
   width: 280px;
+}
+
+.section-title {
+  color: #b5b5d6;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
 }
 
 .hero {
